@@ -1,0 +1,22 @@
+{
+  "base_model": "unsloth/csm-1b",
+  "mixed_speaker_checkpoint": 500,
+  "female_checkpoints_compared": [
+    1500,
+    1750,
+    2000,
+    2250,
+    2500,
+    2750,
+    3000
+  ],
+  "best_overall_checkpoint": 3000,
+  "perceptual_findings": {
+    "female_1750": "Complete target Hindi words became clearly recognizable for the first time.",
+    "female_2000_to_2250": "Pronunciation and target-word recognition continued to improve.",
+    "female_2500_to_2750": "Several samples produced smoother and clearer sentence fragments.",
+    "female_3000": "Best overall checkpoint across most samples. Multiple target words and near-correct sentence fragments were audible, with occasional fumbling and mispronunciation."
+  },
+  "important_observation": "Perceptual quality was sample-dependent. Checkpoints 2500 or 2750 occasionally sounded smoother than 3000, despite checkpoint 3000 performing best overall.",
+  "conclusion": "Female-only specialization produced a clear progressive improvement over the base and mixed-speaker models. Checkpoint 3000 achieved the strongest overall Hindi pronunciation and target alignment, but fully accurate sentence-level intelligibility was not achieved consistently."
+}
