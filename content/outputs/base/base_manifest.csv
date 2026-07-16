@@ -1,0 +1,6 @@
+﻿sample_id,filename,text,model,speaker_id,reference_index,min_new_tokens,max_new_tokens,generation_seed,status,duration_seconds,peak_amplitude,generation_seconds,number_of_samples
+01,base_01_namaste_order_sent.wav,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",base,0,2,40,125,3407,success,10.0,0.89453125,26.601749897003174,240000
+02,base_02_refund_status.wav,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,base,0,2,65,180,3407,success,3.92,1.0,10.801268815994263,94080
+03,base_03_further_assistance.wav,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,base,0,2,38,125,3407,success,10.0,1.0,26.702818155288696,240000
+04,base_04_thank_you.wav,धन्यवाद! आपका दिन शुभ हो।,base,0,2,30,100,3407,success,3.44,0.89111328125,9.42084527015686,82560
+05,base_05_order_number.wav,कृपया अपना ऑर्डर नंबर बताइए।,base,0,2,32,110,3407,success,3.2,1.0,8.809709072113037,76800
