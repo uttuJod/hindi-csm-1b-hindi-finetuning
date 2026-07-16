@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>Hindi CSM-1B Audio Comparisons</title>
+
+    <style>
+        :root {
+            font-family:
+                Inter,
+                Arial,
+                sans-serif;
+            line-height: 1.5;
+        }
+
+        body {
+            margin: 0;
+            background: #f5f7fb;
+            color: #172033;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 48px 24px;
+        }
+
+        header div,
+        main {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: 2.1rem;
+        }
+
+        main {
+            padding: 30px 20px 60px;
+        }
+
+        section {
+            background: white;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+        }
+
+        .audio-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(310px, 1fr));
+            gap: 14px;
+        }
+
+        .audio-card,
+        .system-card {
+            border: 1px solid #dbe1ea;
+            border-radius: 10px;
+            padding: 14px;
+            background: #fafbfc;
+        }
+
+        .filename {
+            font-family: monospace;
+            overflow-wrap: anywhere;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+        }
+
+        audio {
+            width: 100%;
+        }
+
+        .sentence-block {
+            padding: 18px 0;
+            border-top: 1px solid #e2e7ef;
+        }
+
+        .sentence-block:first-of-type {
+            border-top: none;
+        }
+
+        .hindi {
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .system-grid {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        .missing {
+            color: #b42318;
+        }
+
+        a {
+            color: #2563eb;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Hindi CSM-1B LoRA Fine-Tuning</h1>
+            <p>
+                Playable audio comparisons from versions
+                1.1, 1.2, and 1.3.
+            </p>
+            <p>
+                <a
+                    href="README.md"
+                    style="color: white;"
+                >
+                    Open full project README
+                </a>
+            </p>
+        </div>
+    </header>
+
+    <main>
+        
+        <section>
+            <h2>V1.1 — Base model</h2>
+            <p>Original CSM-1B baseline before Hindi LoRA fine-tuning.</p>
+            <div class="audio-grid">
+                
+    <div class="audio-card">
+        <div class="filename">base_01_namaste.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/base/base_01_namaste.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">base_01_namaste_corrected.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/base/base_01_namaste_corrected.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">base_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/base/base_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">base_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/base/base_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">base_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/base/base_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">base_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/base/base_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">base_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/base/base_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">english_control.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/base/english_control.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">reference_female.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/base/reference_female.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+        </section>
+        
+        <section>
+            <h2>V1.1 — Mixed-speaker checkpoint 500</h2>
+            <p>Balanced male/female Hindi adaptation after 500 total steps.</p>
+            <div class="audio-grid">
+                
+    <div class="audio-card">
+        <div class="filename">mixed_500_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/mixed_500/mixed_500_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">mixed_500_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/mixed_500/mixed_500_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">mixed_500_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/mixed_500/mixed_500_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">mixed_500_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/mixed_500/mixed_500_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">mixed_500_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/mixed_500/mixed_500_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+        </section>
+        
+    <section>
+        <h2>V1.2 — Female specialization checkpoint comparison</h2>
+        <p>
+            Audio from checkpoints 1500, 1750, 2000, 2250,
+            2500, 2750, and 3000 across the five fixed Hindi
+            evaluation sentences.
+        </p>
+        <div class="audio-grid">
+            
+    <div class="audio-card">
+        <div class="filename">female_1500_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_1500/female_1500_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_1500_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_1500/female_1500_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_1500_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_1500/female_1500_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_1500_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_1500/female_1500_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_1500_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_1500/female_1500_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_1750_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_1750/female_1750_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_1750_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_1750/female_1750_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_1750_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_1750/female_1750_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_1750_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_1750/female_1750_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_1750_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_1750/female_1750_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2000_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2000/female_2000_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2000_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2000/female_2000_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2000_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2000/female_2000_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2000_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2000/female_2000_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2000_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2000/female_2000_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2250_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2250/female_2250_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2250_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2250/female_2250_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2250_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2250/female_2250_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2250_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2250/female_2250_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2250_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2250/female_2250_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2500_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2500/female_2500_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2500_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2500/female_2500_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2500_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2500/female_2500_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2500_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2500/female_2500_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2500_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2500/female_2500_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2750_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2750/female_2750_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2750_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2750/female_2750_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2750_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2750/female_2750_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2750_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2750/female_2750_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_2750_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_2750/female_2750_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_3000_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_3000/female_3000_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_3000_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_3000/female_3000_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_3000_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_3000/female_3000_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_3000_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_3000/female_3000_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">female_3000_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/female_1500_to_3000/step_3000/female_3000_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+        </div>
+    </section>
+    
+    <section>
+        <h2>V1.3 — Selection-method audio comparison</h2>
+        <p>
+            Direct comparison between the lowest-loss checkpoint,
+            the lowest-ASR-error configuration, and the manually
+            selected perceptual winner.
+        </p>
+        
+        <article class="sentence-block">
+            <h3>Sentence 01</h3>
+            <p class="hindi">
+                नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।
+            </p>
+            <div class="system-grid">
+                
+            <div class="system-card">
+                <h4>Lowest validation loss</h4>
+                <p>
+                    Checkpoint 3000 ·
+                    greedy ·
+                    seed 3407
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed3407_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_3407/step3000_greedy_seed3407_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            <div class="system-card">
+                <h4>Lowest ASR WER/CER</h4>
+                <p>
+                    Checkpoint 2500 ·
+                    focused ·
+                    seed 4107
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed4107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_4107/step2500_focused_seed4107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            <div class="system-card">
+                <h4>Manual perceptual winner</h4>
+                <p>
+                    Checkpoint 2750 ·
+                    greedy ·
+                    seed 5107
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed5107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_5107/step2750_greedy_seed5107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            </div>
+        </article>
+        
+        <article class="sentence-block">
+            <h3>Sentence 02</h3>
+            <p class="hindi">
+                आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।
+            </p>
+            <div class="system-grid">
+                
+            <div class="system-card">
+                <h4>Lowest validation loss</h4>
+                <p>
+                    Checkpoint 3000 ·
+                    greedy ·
+                    seed 3407
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed3407_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_3407/step3000_greedy_seed3407_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            <div class="system-card">
+                <h4>Lowest ASR WER/CER</h4>
+                <p>
+                    Checkpoint 2500 ·
+                    focused ·
+                    seed 4107
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed4107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_4107/step2500_focused_seed4107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            <div class="system-card">
+                <h4>Manual perceptual winner</h4>
+                <p>
+                    Checkpoint 2750 ·
+                    greedy ·
+                    seed 5107
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed5107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_5107/step2750_greedy_seed5107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            </div>
+        </article>
+        
+        <article class="sentence-block">
+            <h3>Sentence 03</h3>
+            <p class="hindi">
+                क्या मैं आपकी किसी और सहायता कर सकता हूँ?
+            </p>
+            <div class="system-grid">
+                
+            <div class="system-card">
+                <h4>Lowest validation loss</h4>
+                <p>
+                    Checkpoint 3000 ·
+                    greedy ·
+                    seed 3407
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed3407_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_3407/step3000_greedy_seed3407_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            <div class="system-card">
+                <h4>Lowest ASR WER/CER</h4>
+                <p>
+                    Checkpoint 2500 ·
+                    focused ·
+                    seed 4107
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed4107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_4107/step2500_focused_seed4107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            <div class="system-card">
+                <h4>Manual perceptual winner</h4>
+                <p>
+                    Checkpoint 2750 ·
+                    greedy ·
+                    seed 5107
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed5107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_5107/step2750_greedy_seed5107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            </div>
+        </article>
+        
+        <article class="sentence-block">
+            <h3>Sentence 04</h3>
+            <p class="hindi">
+                धन्यवाद! आपका दिन शुभ हो।
+            </p>
+            <div class="system-grid">
+                
+            <div class="system-card">
+                <h4>Lowest validation loss</h4>
+                <p>
+                    Checkpoint 3000 ·
+                    greedy ·
+                    seed 3407
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed3407_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_3407/step3000_greedy_seed3407_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            <div class="system-card">
+                <h4>Lowest ASR WER/CER</h4>
+                <p>
+                    Checkpoint 2500 ·
+                    focused ·
+                    seed 4107
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed4107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_4107/step2500_focused_seed4107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            <div class="system-card">
+                <h4>Manual perceptual winner</h4>
+                <p>
+                    Checkpoint 2750 ·
+                    greedy ·
+                    seed 5107
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed5107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_5107/step2750_greedy_seed5107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            </div>
+        </article>
+        
+        <article class="sentence-block">
+            <h3>Sentence 05</h3>
+            <p class="hindi">
+                कृपया अपना ऑर्डर नंबर बताइए।
+            </p>
+            <div class="system-grid">
+                
+            <div class="system-card">
+                <h4>Lowest validation loss</h4>
+                <p>
+                    Checkpoint 3000 ·
+                    greedy ·
+                    seed 3407
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed3407_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_3407/step3000_greedy_seed3407_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            <div class="system-card">
+                <h4>Lowest ASR WER/CER</h4>
+                <p>
+                    Checkpoint 2500 ·
+                    focused ·
+                    seed 4107
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed4107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_4107/step2500_focused_seed4107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            <div class="system-card">
+                <h4>Manual perceptual winner</h4>
+                <p>
+                    Checkpoint 2750 ·
+                    greedy ·
+                    seed 5107
+                </p>
+                
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed5107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_5107/step2750_greedy_seed5107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+            
+            </div>
+        </article>
+        
+    </section>
+    
+    <section>
+        <details>
+            <summary>
+                V1.3 — Full inference sweep (136 audio files)
+            </summary>
+            <p>
+                Checkpoints 2500, 2750, and 3000 using greedy,
+                focused, and moderate decoding across three seeds.
+            </p>
+            <div class="audio-grid">
+                
+    <div class="audio-card">
+        <div class="filename">step3000_focused_sample03.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/smoke_test/step3000_focused_sample03.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed3407_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_3407/step2500_focused_seed3407_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed3407_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_3407/step2500_focused_seed3407_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed3407_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_3407/step2500_focused_seed3407_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed3407_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_3407/step2500_focused_seed3407_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed3407_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_3407/step2500_focused_seed3407_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed4107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_4107/step2500_focused_seed4107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed4107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_4107/step2500_focused_seed4107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed4107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_4107/step2500_focused_seed4107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed4107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_4107/step2500_focused_seed4107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed4107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_4107/step2500_focused_seed4107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed5107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_5107/step2500_focused_seed5107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed5107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_5107/step2500_focused_seed5107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed5107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_5107/step2500_focused_seed5107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed5107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_5107/step2500_focused_seed5107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_focused_seed5107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/focused/seed_5107/step2500_focused_seed5107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed3407_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_3407/step2500_greedy_seed3407_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed3407_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_3407/step2500_greedy_seed3407_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed3407_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_3407/step2500_greedy_seed3407_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed3407_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_3407/step2500_greedy_seed3407_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed3407_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_3407/step2500_greedy_seed3407_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed4107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_4107/step2500_greedy_seed4107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed4107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_4107/step2500_greedy_seed4107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed4107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_4107/step2500_greedy_seed4107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed4107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_4107/step2500_greedy_seed4107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed4107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_4107/step2500_greedy_seed4107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed5107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_5107/step2500_greedy_seed5107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed5107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_5107/step2500_greedy_seed5107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed5107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_5107/step2500_greedy_seed5107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed5107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_5107/step2500_greedy_seed5107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_greedy_seed5107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/greedy/seed_5107/step2500_greedy_seed5107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed3407_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_3407/step2500_moderate_seed3407_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed3407_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_3407/step2500_moderate_seed3407_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed3407_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_3407/step2500_moderate_seed3407_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed3407_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_3407/step2500_moderate_seed3407_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed3407_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_3407/step2500_moderate_seed3407_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed4107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_4107/step2500_moderate_seed4107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed4107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_4107/step2500_moderate_seed4107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed4107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_4107/step2500_moderate_seed4107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed4107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_4107/step2500_moderate_seed4107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed4107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_4107/step2500_moderate_seed4107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed5107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_5107/step2500_moderate_seed5107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed5107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_5107/step2500_moderate_seed5107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed5107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_5107/step2500_moderate_seed5107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed5107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_5107/step2500_moderate_seed5107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2500_moderate_seed5107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2500/moderate/seed_5107/step2500_moderate_seed5107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed3407_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_3407/step2750_focused_seed3407_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed3407_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_3407/step2750_focused_seed3407_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed3407_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_3407/step2750_focused_seed3407_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed3407_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_3407/step2750_focused_seed3407_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed3407_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_3407/step2750_focused_seed3407_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed4107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_4107/step2750_focused_seed4107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed4107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_4107/step2750_focused_seed4107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed4107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_4107/step2750_focused_seed4107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed4107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_4107/step2750_focused_seed4107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed4107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_4107/step2750_focused_seed4107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed5107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_5107/step2750_focused_seed5107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed5107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_5107/step2750_focused_seed5107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed5107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_5107/step2750_focused_seed5107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed5107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_5107/step2750_focused_seed5107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_focused_seed5107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/focused/seed_5107/step2750_focused_seed5107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed3407_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_3407/step2750_greedy_seed3407_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed3407_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_3407/step2750_greedy_seed3407_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed3407_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_3407/step2750_greedy_seed3407_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed3407_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_3407/step2750_greedy_seed3407_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed3407_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_3407/step2750_greedy_seed3407_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed4107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_4107/step2750_greedy_seed4107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed4107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_4107/step2750_greedy_seed4107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed4107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_4107/step2750_greedy_seed4107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed4107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_4107/step2750_greedy_seed4107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed4107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_4107/step2750_greedy_seed4107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed5107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_5107/step2750_greedy_seed5107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed5107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_5107/step2750_greedy_seed5107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed5107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_5107/step2750_greedy_seed5107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed5107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_5107/step2750_greedy_seed5107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_greedy_seed5107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/greedy/seed_5107/step2750_greedy_seed5107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed3407_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_3407/step2750_moderate_seed3407_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed3407_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_3407/step2750_moderate_seed3407_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed3407_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_3407/step2750_moderate_seed3407_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed3407_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_3407/step2750_moderate_seed3407_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed3407_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_3407/step2750_moderate_seed3407_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed4107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_4107/step2750_moderate_seed4107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed4107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_4107/step2750_moderate_seed4107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed4107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_4107/step2750_moderate_seed4107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed4107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_4107/step2750_moderate_seed4107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed4107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_4107/step2750_moderate_seed4107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed5107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_5107/step2750_moderate_seed5107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed5107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_5107/step2750_moderate_seed5107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed5107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_5107/step2750_moderate_seed5107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed5107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_5107/step2750_moderate_seed5107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step2750_moderate_seed5107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_2750/moderate/seed_5107/step2750_moderate_seed5107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed3407_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_3407/step3000_focused_seed3407_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed3407_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_3407/step3000_focused_seed3407_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed3407_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_3407/step3000_focused_seed3407_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed3407_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_3407/step3000_focused_seed3407_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed3407_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_3407/step3000_focused_seed3407_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed4107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_4107/step3000_focused_seed4107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed4107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_4107/step3000_focused_seed4107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed4107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_4107/step3000_focused_seed4107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed4107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_4107/step3000_focused_seed4107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed4107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_4107/step3000_focused_seed4107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed5107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_5107/step3000_focused_seed5107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed5107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_5107/step3000_focused_seed5107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed5107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_5107/step3000_focused_seed5107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed5107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_5107/step3000_focused_seed5107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_focused_seed5107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/focused/seed_5107/step3000_focused_seed5107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed3407_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_3407/step3000_greedy_seed3407_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed3407_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_3407/step3000_greedy_seed3407_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed3407_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_3407/step3000_greedy_seed3407_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed3407_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_3407/step3000_greedy_seed3407_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed3407_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_3407/step3000_greedy_seed3407_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed4107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_4107/step3000_greedy_seed4107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed4107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_4107/step3000_greedy_seed4107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed4107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_4107/step3000_greedy_seed4107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed4107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_4107/step3000_greedy_seed4107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed4107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_4107/step3000_greedy_seed4107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed5107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_5107/step3000_greedy_seed5107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed5107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_5107/step3000_greedy_seed5107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed5107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_5107/step3000_greedy_seed5107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed5107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_5107/step3000_greedy_seed5107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_greedy_seed5107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/greedy/seed_5107/step3000_greedy_seed5107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed3407_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_3407/step3000_moderate_seed3407_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed3407_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_3407/step3000_moderate_seed3407_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed3407_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_3407/step3000_moderate_seed3407_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed3407_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_3407/step3000_moderate_seed3407_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed3407_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_3407/step3000_moderate_seed3407_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed4107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_4107/step3000_moderate_seed4107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed4107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_4107/step3000_moderate_seed4107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed4107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_4107/step3000_moderate_seed4107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed4107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_4107/step3000_moderate_seed4107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed4107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_4107/step3000_moderate_seed4107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed5107_01_namaste_order_sent.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_5107/step3000_moderate_seed5107_01_namaste_order_sent.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed5107_02_refund_status.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_5107/step3000_moderate_seed5107_02_refund_status.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed5107_03_further_assistance.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_5107/step3000_moderate_seed5107_03_further_assistance.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed5107_04_thank_you.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_5107/step3000_moderate_seed5107_04_thank_you.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+    <div class="audio-card">
+        <div class="filename">step3000_moderate_seed5107_05_order_number.wav</div>
+        <audio controls preload="none">
+            <source src="outputs/inference_sweep_2500_2750_3000/step_3000/moderate/seed_5107/step3000_moderate_seed5107_05_order_number.wav" type="audio/wav">
+            Your browser does not support audio playback.
+        </audio>
+    </div>
+    
+            </div>
+        </details>
+    </section>
+    
+    </main>
+</body>
+</html>

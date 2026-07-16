@@ -1,0 +1,22 @@
+{
+  "experiment": "female_only_specialization",
+  "starting_model": "mixed_speaker_500_step_adapter",
+  "additional_training_steps": 1500,
+  "training_samples": 2689,
+  "validation_samples": 142,
+  "best_checkpoint": "checkpoint-1500",
+  "validation_losses": {
+    "step_500": 5.762839,
+    "step_1000": 5.329138,
+    "step_1500": 5.22455
+  },
+  "manual_evaluation": {
+    "overall_result": "clear improvement",
+    "observations": [
+      "Several target Hindi words became recognizable.",
+      "The female-only model was clearly better than the mixed-speaker 500-step model.",
+      "Sample 3 sounded close to the intended target.",
+      "Some samples remained only partially intelligible."
+    ]
+  }
+}

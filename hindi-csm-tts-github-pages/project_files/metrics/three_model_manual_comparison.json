@@ -1,0 +1,33 @@
+{
+  "base_model": {
+    "intelligibility": "unintelligible",
+    "observations": [
+      "Generated speech did not match the Hindi targets.",
+      "Some samples contained short speech followed by silence.",
+      "The English control sample was intelligible."
+    ]
+  },
+  "pilot_100_steps": {
+    "intelligibility": "mostly unintelligible",
+    "observations": [
+      "Speech became more continuous.",
+      "Some Hindi-like pronunciation was audible.",
+      "The complete target sentences were not understandable."
+    ]
+  },
+  "expanded_500_steps": {
+    "intelligibility": "mostly unintelligible",
+    "observations": [
+      "Hindi-like phonetic characteristics remained audible.",
+      "No reliable perceptual difference was identified compared with the 100-step model.",
+      "The target sentences remained largely unintelligible."
+    ]
+  },
+  "training_metrics": {
+    "expanded_eval_loss_step_100": 6.241882,
+    "expanded_eval_loss_step_200": 6.145485,
+    "expanded_eval_loss_step_300": 6.099113,
+    "expanded_eval_loss_step_400": 6.09124
+  },
+  "conclusion": "The decreasing validation loss shows that the adapter learned from the Hindi dataset, but the improvement did not translate into a clear perceptual intelligibility gain between the 100-step and 500-step checkpoints."
+}

@@ -1,0 +1,136 @@
+﻿checkpoint,configuration,seed,sample_id,text,filename,status,duration_seconds,generation_seconds,peak_amplitude
+2500,greedy,3407,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2500/greedy/seed_3407/step2500_greedy_seed3407_01_namaste_order_sent.wav,success,4.48,21.873137712478638,1.0
+2500,greedy,3407,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2500/greedy/seed_3407/step2500_greedy_seed3407_02_refund_status.wav,success,6.96,33.3431715965271,0.8974609375
+2500,greedy,3407,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2500/greedy/seed_3407/step2500_greedy_seed3407_03_further_assistance.wav,success,2.48,12.335587978363037,0.84912109375
+2500,greedy,3407,04,धन्यवाद! आपका दिन शुभ हो।,step_2500/greedy/seed_3407/step2500_greedy_seed3407_04_thank_you.wav,success,2.88,14.171897172927856,1.0
+2500,greedy,3407,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2500/greedy/seed_3407/step2500_greedy_seed3407_05_order_number.wav,success,2.96,14.591736316680908,0.90380859375
+2500,greedy,4107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2500/greedy/seed_4107/step2500_greedy_seed4107_01_namaste_order_sent.wav,success,4.48,21.84342670440674,1.0
+2500,greedy,4107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2500/greedy/seed_4107/step2500_greedy_seed4107_02_refund_status.wav,success,6.96,33.64747667312622,0.8974609375
+2500,greedy,4107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2500/greedy/seed_4107/step2500_greedy_seed4107_03_further_assistance.wav,success,2.48,12.182066679000854,0.84912109375
+2500,greedy,4107,04,धन्यवाद! आपका दिन शुभ हो।,step_2500/greedy/seed_4107/step2500_greedy_seed4107_04_thank_you.wav,success,2.88,14.161945819854736,1.0
+2500,greedy,4107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2500/greedy/seed_4107/step2500_greedy_seed4107_05_order_number.wav,success,2.96,14.606646060943604,0.90380859375
+2500,greedy,5107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2500/greedy/seed_5107/step2500_greedy_seed5107_01_namaste_order_sent.wav,success,4.48,21.637255430221558,1.0
+2500,greedy,5107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2500/greedy/seed_5107/step2500_greedy_seed5107_02_refund_status.wav,success,6.96,33.08990669250488,0.8974609375
+2500,greedy,5107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2500/greedy/seed_5107/step2500_greedy_seed5107_03_further_assistance.wav,success,2.48,12.300605297088623,0.84912109375
+2500,greedy,5107,04,धन्यवाद! आपका दिन शुभ हो।,step_2500/greedy/seed_5107/step2500_greedy_seed5107_04_thank_you.wav,success,2.88,14.27821683883667,1.0
+2500,greedy,5107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2500/greedy/seed_5107/step2500_greedy_seed5107_05_order_number.wav,success,2.96,14.558492660522461,0.90380859375
+2500,focused,3407,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2500/focused/seed_3407/step2500_focused_seed3407_01_namaste_order_sent.wav,success,4.88,24.794617652893066,1.0
+2500,focused,3407,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2500/focused/seed_3407/step2500_focused_seed3407_02_refund_status.wav,success,5.84,29.754019021987915,0.681640625
+2500,focused,3407,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2500/focused/seed_3407/step2500_focused_seed3407_03_further_assistance.wav,success,2.8,14.504272699356079,0.970703125
+2500,focused,3407,04,धन्यवाद! आपका दिन शुभ हो।,step_2500/focused/seed_3407/step2500_focused_seed3407_04_thank_you.wav,success,2.64,13.909034252166748,1.0
+2500,focused,3407,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2500/focused/seed_3407/step2500_focused_seed3407_05_order_number.wav,success,2.96,15.328884601593018,0.84423828125
+2500,focused,4107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2500/focused/seed_4107/step2500_focused_seed4107_01_namaste_order_sent.wav,success,4.72,24.250627517700195,1.0
+2500,focused,4107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2500/focused/seed_4107/step2500_focused_seed4107_02_refund_status.wav,success,6.08,31.16694951057434,0.859375
+2500,focused,4107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2500/focused/seed_4107/step2500_focused_seed4107_03_further_assistance.wav,success,2.64,13.795375347137451,0.92626953125
+2500,focused,4107,04,धन्यवाद! आपका दिन शुभ हो।,step_2500/focused/seed_4107/step2500_focused_seed4107_04_thank_you.wav,success,2.72,14.103479862213135,0.71044921875
+2500,focused,4107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2500/focused/seed_4107/step2500_focused_seed4107_05_order_number.wav,success,2.88,15.044007301330566,0.81982421875
+2500,focused,5107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2500/focused/seed_5107/step2500_focused_seed5107_01_namaste_order_sent.wav,success,4.32,22.326447248458862,0.8271484375
+2500,focused,5107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2500/focused/seed_5107/step2500_focused_seed5107_02_refund_status.wav,success,5.28,26.91747522354126,0.953125
+2500,focused,5107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2500/focused/seed_5107/step2500_focused_seed5107_03_further_assistance.wav,success,3.04,15.78049373626709,1.0
+2500,focused,5107,04,धन्यवाद! आपका दिन शुभ हो।,step_2500/focused/seed_5107/step2500_focused_seed5107_04_thank_you.wav,success,3.28,16.73753786087036,0.80126953125
+2500,focused,5107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2500/focused/seed_5107/step2500_focused_seed5107_05_order_number.wav,success,3.36,17.17964458465576,0.9521484375
+2500,moderate,3407,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2500/moderate/seed_3407/step2500_moderate_seed3407_01_namaste_order_sent.wav,success,4.24,21.52738618850708,1.0
+2500,moderate,3407,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2500/moderate/seed_3407/step2500_moderate_seed3407_02_refund_status.wav,success,5.6,28.371097326278687,0.685546875
+2500,moderate,3407,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2500/moderate/seed_3407/step2500_moderate_seed3407_03_further_assistance.wav,success,2.96,15.128360748291016,0.978515625
+2500,moderate,3407,04,धन्यवाद! आपका दिन शुभ हो।,step_2500/moderate/seed_3407/step2500_moderate_seed3407_04_thank_you.wav,success,3.04,15.587817907333374,0.97119140625
+2500,moderate,3407,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2500/moderate/seed_3407/step2500_moderate_seed3407_05_order_number.wav,success,2.88,14.889944314956665,0.7998046875
+2500,moderate,4107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2500/moderate/seed_4107/step2500_moderate_seed4107_01_namaste_order_sent.wav,success,4.48,22.70111918449402,0.900390625
+2500,moderate,4107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2500/moderate/seed_4107/step2500_moderate_seed4107_02_refund_status.wav,success,5.44,27.50568127632141,0.9130859375
+2500,moderate,4107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2500/moderate/seed_4107/step2500_moderate_seed4107_03_further_assistance.wav,success,2.72,14.195976495742798,0.78564453125
+2500,moderate,4107,04,धन्यवाद! आपका दिन शुभ हो।,step_2500/moderate/seed_4107/step2500_moderate_seed4107_04_thank_you.wav,success,2.48,12.838579177856445,0.9658203125
+2500,moderate,4107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2500/moderate/seed_4107/step2500_moderate_seed4107_05_order_number.wav,success,3.28,16.73373007774353,0.92919921875
+2500,moderate,5107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2500/moderate/seed_5107/step2500_moderate_seed5107_01_namaste_order_sent.wav,success,4.56,23.216033220291138,0.79150390625
+2500,moderate,5107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2500/moderate/seed_5107/step2500_moderate_seed5107_02_refund_status.wav,success,5.68,28.848593711853027,0.7080078125
+2500,moderate,5107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2500/moderate/seed_5107/step2500_moderate_seed5107_03_further_assistance.wav,success,3.2,16.496509075164795,0.853515625
+2500,moderate,5107,04,धन्यवाद! आपका दिन शुभ हो।,step_2500/moderate/seed_5107/step2500_moderate_seed5107_04_thank_you.wav,success,2.72,13.840121269226074,0.81884765625
+2500,moderate,5107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2500/moderate/seed_5107/step2500_moderate_seed5107_05_order_number.wav,success,2.88,14.9259033203125,0.935546875
+2750,greedy,3407,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2750/greedy/seed_3407/step2750_greedy_seed3407_01_namaste_order_sent.wav,success,5.2,25.199248790740967,1.0
+2750,greedy,3407,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2750/greedy/seed_3407/step2750_greedy_seed3407_02_refund_status.wav,success,5.44,26.051633834838867,0.8095703125
+2750,greedy,3407,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2750/greedy/seed_3407/step2750_greedy_seed3407_03_further_assistance.wav,success,3.12,15.183208703994751,0.89404296875
+2750,greedy,3407,04,धन्यवाद! आपका दिन शुभ हो।,step_2750/greedy/seed_3407/step2750_greedy_seed3407_04_thank_you.wav,success,2.8,13.665073871612549,0.94873046875
+2750,greedy,3407,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2750/greedy/seed_3407/step2750_greedy_seed3407_05_order_number.wav,success,3.04,15.00267243385315,0.9853515625
+2750,greedy,4107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2750/greedy/seed_4107/step2750_greedy_seed4107_01_namaste_order_sent.wav,success,5.2,24.899187326431274,1.0
+2750,greedy,4107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2750/greedy/seed_4107/step2750_greedy_seed4107_02_refund_status.wav,success,5.44,26.151845455169678,0.8095703125
+2750,greedy,4107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2750/greedy/seed_4107/step2750_greedy_seed4107_03_further_assistance.wav,success,3.12,15.133301258087158,0.89404296875
+2750,greedy,4107,04,धन्यवाद! आपका दिन शुभ हो।,step_2750/greedy/seed_4107/step2750_greedy_seed4107_04_thank_you.wav,success,2.8,13.85494613647461,0.94873046875
+2750,greedy,4107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2750/greedy/seed_4107/step2750_greedy_seed4107_05_order_number.wav,success,3.04,14.825347661972046,0.9853515625
+2750,greedy,5107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2750/greedy/seed_5107/step2750_greedy_seed5107_01_namaste_order_sent.wav,success,5.2,24.945271253585815,1.0
+2750,greedy,5107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2750/greedy/seed_5107/step2750_greedy_seed5107_02_refund_status.wav,success,5.44,26.152266263961792,0.8095703125
+2750,greedy,5107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2750/greedy/seed_5107/step2750_greedy_seed5107_03_further_assistance.wav,success,3.12,15.217961549758911,0.89404296875
+2750,greedy,5107,04,धन्यवाद! आपका दिन शुभ हो।,step_2750/greedy/seed_5107/step2750_greedy_seed5107_04_thank_you.wav,success,2.8,13.703457593917847,0.94873046875
+2750,greedy,5107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2750/greedy/seed_5107/step2750_greedy_seed5107_05_order_number.wav,success,3.04,14.85105299949646,0.9853515625
+2750,focused,3407,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2750/focused/seed_3407/step2750_focused_seed3407_01_namaste_order_sent.wav,success,4.96,25.144087553024292,0.88427734375
+2750,focused,3407,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2750/focused/seed_3407/step2750_focused_seed3407_02_refund_status.wav,success,5.28,26.53513264656067,0.9755859375
+2750,focused,3407,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2750/focused/seed_3407/step2750_focused_seed3407_03_further_assistance.wav,success,2.8,14.382550716400146,0.76513671875
+2750,focused,3407,04,धन्यवाद! आपका दिन शुभ हो।,step_2750/focused/seed_3407/step2750_focused_seed3407_04_thank_you.wav,success,3.28,16.844947338104248,1.0
+2750,focused,3407,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2750/focused/seed_3407/step2750_focused_seed3407_05_order_number.wav,success,3.04,15.48167610168457,0.63818359375
+2750,focused,4107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2750/focused/seed_4107/step2750_focused_seed4107_01_namaste_order_sent.wav,success,4.88,24.66625142097473,1.0
+2750,focused,4107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2750/focused/seed_4107/step2750_focused_seed4107_02_refund_status.wav,success,5.6,28.522587060928345,0.81103515625
+2750,focused,4107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2750/focused/seed_4107/step2750_focused_seed4107_03_further_assistance.wav,success,2.96,15.209781408309937,0.904296875
+2750,focused,4107,04,धन्यवाद! आपका दिन शुभ हो।,step_2750/focused/seed_4107/step2750_focused_seed4107_04_thank_you.wav,success,2.96,15.278608322143555,0.92724609375
+2750,focused,4107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2750/focused/seed_4107/step2750_focused_seed4107_05_order_number.wav,success,2.88,14.712300300598145,0.79248046875
+2750,focused,5107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2750/focused/seed_5107/step2750_focused_seed5107_01_namaste_order_sent.wav,success,4.4,22.271492958068848,0.75439453125
+2750,focused,5107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2750/focused/seed_5107/step2750_focused_seed5107_02_refund_status.wav,success,5.52,27.96138858795166,0.78271484375
+2750,focused,5107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2750/focused/seed_5107/step2750_focused_seed5107_03_further_assistance.wav,success,3.28,16.663392066955566,0.97021484375
+2750,focused,5107,04,धन्यवाद! आपका दिन शुभ हो।,step_2750/focused/seed_5107/step2750_focused_seed5107_04_thank_you.wav,success,3.04,15.79388165473938,1.0
+2750,focused,5107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2750/focused/seed_5107/step2750_focused_seed5107_05_order_number.wav,success,3.68,18.888286352157593,0.8701171875
+2750,moderate,3407,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2750/moderate/seed_3407/step2750_moderate_seed3407_01_namaste_order_sent.wav,success,4.32,21.955431938171387,1.0
+2750,moderate,3407,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2750/moderate/seed_3407/step2750_moderate_seed3407_02_refund_status.wav,success,5.44,27.755110263824463,1.0
+2750,moderate,3407,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2750/moderate/seed_3407/step2750_moderate_seed3407_03_further_assistance.wav,success,3.12,16.00713562965393,1.0
+2750,moderate,3407,04,धन्यवाद! आपका दिन शुभ हो।,step_2750/moderate/seed_3407/step2750_moderate_seed3407_04_thank_you.wav,success,3.12,16.178452968597412,0.95654296875
+2750,moderate,3407,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2750/moderate/seed_3407/step2750_moderate_seed3407_05_order_number.wav,success,2.96,15.426111221313477,0.783203125
+2750,moderate,4107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2750/moderate/seed_4107/step2750_moderate_seed4107_01_namaste_order_sent.wav,success,4.88,24.80044150352478,0.9287109375
+2750,moderate,4107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2750/moderate/seed_4107/step2750_moderate_seed4107_02_refund_status.wav,success,6.08,30.826297998428345,0.93310546875
+2750,moderate,4107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2750/moderate/seed_4107/step2750_moderate_seed4107_03_further_assistance.wav,success,2.64,13.655900716781616,0.84375
+2750,moderate,4107,04,धन्यवाद! आपका दिन शुभ हो।,step_2750/moderate/seed_4107/step2750_moderate_seed4107_04_thank_you.wav,success,2.88,14.837421417236328,0.744140625
+2750,moderate,4107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2750/moderate/seed_4107/step2750_moderate_seed4107_05_order_number.wav,success,3.12,16.15581774711609,0.92333984375
+2750,moderate,5107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_2750/moderate/seed_5107/step2750_moderate_seed5107_01_namaste_order_sent.wav,success,4.88,24.926899671554565,0.83544921875
+2750,moderate,5107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_2750/moderate/seed_5107/step2750_moderate_seed5107_02_refund_status.wav,success,5.2,26.83661413192749,0.654296875
+2750,moderate,5107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_2750/moderate/seed_5107/step2750_moderate_seed5107_03_further_assistance.wav,success,2.8,14.617283582687378,0.69580078125
+2750,moderate,5107,04,धन्यवाद! आपका दिन शुभ हो।,step_2750/moderate/seed_5107/step2750_moderate_seed5107_04_thank_you.wav,success,2.56,13.329481840133667,0.65966796875
+2750,moderate,5107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_2750/moderate/seed_5107/step2750_moderate_seed5107_05_order_number.wav,success,3.52,18.075762271881104,0.828125
+3000,greedy,3407,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_3000/greedy/seed_3407/step3000_greedy_seed3407_01_namaste_order_sent.wav,success,5.2,25.1843101978302,1.0
+3000,greedy,3407,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_3000/greedy/seed_3407/step3000_greedy_seed3407_02_refund_status.wav,success,5.6,28.16928744316101,0.77685546875
+3000,greedy,3407,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_3000/greedy/seed_3407/step3000_greedy_seed3407_03_further_assistance.wav,success,2.64,13.026905298233032,0.86572265625
+3000,greedy,3407,04,धन्यवाद! आपका दिन शुभ हो।,step_3000/greedy/seed_3407/step3000_greedy_seed3407_04_thank_you.wav,success,2.88,14.11325979232788,1.0
+3000,greedy,3407,05,कृपया अपना ऑर्डर नंबर बताइए।,step_3000/greedy/seed_3407/step3000_greedy_seed3407_05_order_number.wav,success,3.6,17.682597875595093,0.8671875
+3000,greedy,4107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_3000/greedy/seed_4107/step3000_greedy_seed4107_01_namaste_order_sent.wav,success,5.2,25.07106375694275,1.0
+3000,greedy,4107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_3000/greedy/seed_4107/step3000_greedy_seed4107_02_refund_status.wav,success,5.6,26.817837238311768,0.77685546875
+3000,greedy,4107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_3000/greedy/seed_4107/step3000_greedy_seed4107_03_further_assistance.wav,success,2.64,13.221955060958862,0.86572265625
+3000,greedy,4107,04,धन्यवाद! आपका दिन शुभ हो।,step_3000/greedy/seed_4107/step3000_greedy_seed4107_04_thank_you.wav,success,2.88,14.176317930221558,1.0
+3000,greedy,4107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_3000/greedy/seed_4107/step3000_greedy_seed4107_05_order_number.wav,success,3.6,17.575445413589478,0.8671875
+3000,greedy,5107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_3000/greedy/seed_5107/step3000_greedy_seed5107_01_namaste_order_sent.wav,success,5.2,24.70988917350769,1.0
+3000,greedy,5107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_3000/greedy/seed_5107/step3000_greedy_seed5107_02_refund_status.wav,success,5.6,26.891127109527588,0.77685546875
+3000,greedy,5107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_3000/greedy/seed_5107/step3000_greedy_seed5107_03_further_assistance.wav,success,2.64,12.889953851699829,0.86572265625
+3000,greedy,5107,04,धन्यवाद! आपका दिन शुभ हो।,step_3000/greedy/seed_5107/step3000_greedy_seed5107_04_thank_you.wav,success,2.88,13.993626117706299,1.0
+3000,greedy,5107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_3000/greedy/seed_5107/step3000_greedy_seed5107_05_order_number.wav,success,3.6,17.342196702957153,0.8671875
+3000,focused,3407,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_3000/focused/seed_3407/step3000_focused_seed3407_01_namaste_order_sent.wav,success,5.04,25.501511335372925,0.8974609375
+3000,focused,3407,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_3000/focused/seed_3407/step3000_focused_seed3407_02_refund_status.wav,success,5.36,27.211683988571167,0.67578125
+3000,focused,3407,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_3000/focused/seed_3407/step3000_focused_seed3407_03_further_assistance.wav,success,2.8,14.508413791656494,0.783203125
+3000,focused,3407,04,धन्यवाद! आपका दिन शुभ हो।,step_3000/focused/seed_3407/step3000_focused_seed3407_04_thank_you.wav,success,2.96,15.698148250579834,1.0
+3000,focused,3407,05,कृपया अपना ऑर्डर नंबर बताइए।,step_3000/focused/seed_3407/step3000_focused_seed3407_05_order_number.wav,success,3.28,16.82146954536438,0.8896484375
+3000,focused,4107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_3000/focused/seed_4107/step3000_focused_seed4107_01_namaste_order_sent.wav,success,4.64,23.654881954193115,0.955078125
+3000,focused,4107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_3000/focused/seed_4107/step3000_focused_seed4107_02_refund_status.wav,success,5.44,27.812931299209595,0.8203125
+3000,focused,4107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_3000/focused/seed_4107/step3000_focused_seed4107_03_further_assistance.wav,success,3.04,15.509626150131226,0.7890625
+3000,focused,4107,04,धन्यवाद! आपका दिन शुभ हो।,step_3000/focused/seed_4107/step3000_focused_seed4107_04_thank_you.wav,success,2.96,15.63678503036499,0.92529296875
+3000,focused,4107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_3000/focused/seed_4107/step3000_focused_seed4107_05_order_number.wav,success,3.52,17.941040515899658,0.77197265625
+3000,focused,5107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_3000/focused/seed_5107/step3000_focused_seed5107_01_namaste_order_sent.wav,success,4.72,23.77455449104309,0.97119140625
+3000,focused,5107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_3000/focused/seed_5107/step3000_focused_seed5107_02_refund_status.wav,success,6.0,30.221919775009155,0.88427734375
+3000,focused,5107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_3000/focused/seed_5107/step3000_focused_seed5107_03_further_assistance.wav,success,2.96,15.307360887527466,0.97021484375
+3000,focused,5107,04,धन्यवाद! आपका दिन शुभ हो।,step_3000/focused/seed_5107/step3000_focused_seed5107_04_thank_you.wav,success,3.04,15.669770240783691,0.76513671875
+3000,focused,5107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_3000/focused/seed_5107/step3000_focused_seed5107_05_order_number.wav,success,2.96,15.040426969528198,0.8701171875
+3000,moderate,3407,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_3000/moderate/seed_3407/step3000_moderate_seed3407_01_namaste_order_sent.wav,success,4.72,23.766913890838623,1.0
+3000,moderate,3407,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_3000/moderate/seed_3407/step3000_moderate_seed3407_02_refund_status.wav,success,5.76,28.77749490737915,1.0
+3000,moderate,3407,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_3000/moderate/seed_3407/step3000_moderate_seed3407_03_further_assistance.wav,success,3.2,16.186381816864014,1.0
+3000,moderate,3407,04,धन्यवाद! आपका दिन शुभ हो।,step_3000/moderate/seed_3407/step3000_moderate_seed3407_04_thank_you.wav,success,2.88,14.943789005279541,1.0
+3000,moderate,3407,05,कृपया अपना ऑर्डर नंबर बताइए।,step_3000/moderate/seed_3407/step3000_moderate_seed3407_05_order_number.wav,success,2.96,14.993303775787354,0.8056640625
+3000,moderate,4107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_3000/moderate/seed_4107/step3000_moderate_seed4107_01_namaste_order_sent.wav,success,5.04,25.368205547332764,1.0
+3000,moderate,4107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_3000/moderate/seed_4107/step3000_moderate_seed4107_02_refund_status.wav,success,5.68,28.562463521957397,0.873046875
+3000,moderate,4107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_3000/moderate/seed_4107/step3000_moderate_seed4107_03_further_assistance.wav,success,3.2,16.147967100143433,0.74560546875
+3000,moderate,4107,04,धन्यवाद! आपका दिन शुभ हो।,step_3000/moderate/seed_4107/step3000_moderate_seed4107_04_thank_you.wav,success,2.72,13.96436357498169,0.8369140625
+3000,moderate,4107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_3000/moderate/seed_4107/step3000_moderate_seed4107_05_order_number.wav,success,3.44,17.82897710800171,1.0
+3000,moderate,5107,01,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",step_3000/moderate/seed_5107/step3000_moderate_seed5107_01_namaste_order_sent.wav,success,5.2,25.936644554138184,0.94580078125
+3000,moderate,5107,02,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,step_3000/moderate/seed_5107/step3000_moderate_seed5107_02_refund_status.wav,success,5.28,26.715331077575684,0.7568359375
+3000,moderate,5107,03,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,step_3000/moderate/seed_5107/step3000_moderate_seed5107_03_further_assistance.wav,success,2.96,15.092381477355957,0.69580078125
+3000,moderate,5107,04,धन्यवाद! आपका दिन शुभ हो।,step_3000/moderate/seed_5107/step3000_moderate_seed5107_04_thank_you.wav,success,2.96,15.05360460281372,0.751953125
+3000,moderate,5107,05,कृपया अपना ऑर्डर नंबर बताइए।,step_3000/moderate/seed_5107/step3000_moderate_seed5107_05_order_number.wav,success,2.88,14.770341157913208,0.7109375
