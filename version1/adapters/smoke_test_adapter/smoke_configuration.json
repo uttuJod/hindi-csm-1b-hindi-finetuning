@@ -1,0 +1,12 @@
+{
+  "training_samples": 16,
+  "steps": 10,
+  "per_device_batch_size": 1,
+  "gradient_accumulation_steps": 4,
+  "effective_batch_size": 4,
+  "learning_rate": 0.0002,
+  "lora_rank": 32,
+  "lora_alpha": 32,
+  "seed": 3407,
+  "final_smoke_loss": 6.892647409439087
+}

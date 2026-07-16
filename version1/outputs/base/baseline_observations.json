@@ -1,0 +1,18 @@
+{
+  "english_control": {
+    "intelligible": true,
+    "observation": "The English control sentence was completely understandable."
+  },
+  "hindi_base_model": {
+    "overall_intelligibility": "unintelligible",
+    "target_text_match": "very poor",
+    "samples": {
+      "01": "Unintelligible and does not match the target.",
+      "02": "Speech-like output resembling an unknown foreign language, but does not match the Hindi target.",
+      "03": "Unintelligible and does not match the target.",
+      "04": "Speech-like output resembling an unknown foreign language, but does not match the Hindi target.",
+      "05": "Speech-like output resembling an unknown foreign language, but does not match the Hindi target."
+    },
+    "conclusion": "The inference pipeline works in English, but the base checkpoint has inadequate Hindi pronunciation and text-to-speech alignment."
+  }
+}
