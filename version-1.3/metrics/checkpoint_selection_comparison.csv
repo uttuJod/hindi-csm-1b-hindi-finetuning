@@ -1,0 +1,4 @@
+﻿selection_method,selected_checkpoint,configuration,seed,interpretation
+Lowest validation loss,3000,greedy,3407,"Best optimization metric, but not the best perceptual output."
+Lowest ASR WER/CER,2500,focused,4107,"Best Whisper transcription score, but not preferred by human listening."
+Manual perceptual evaluation,2750,greedy,5107,"Best pronunciation, intelligibility, stability, and overall naturalness."

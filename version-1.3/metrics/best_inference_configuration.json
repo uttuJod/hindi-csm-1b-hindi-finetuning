@@ -1,0 +1,7 @@
+{
+  "best_checkpoint": 2750,
+  "best_configuration": "greedy",
+  "best_seed": 5107,
+  "evaluation": "Almost fully understandable across all five sentences. Most samples contained only one or two mispronounced words.",
+  "selection_reason": "Checkpoint 2750 sounded more natural and accurate than checkpoint 3000 despite the slightly higher validation loss."
+}
