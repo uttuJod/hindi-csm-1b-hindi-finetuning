@@ -440,6 +440,13 @@ Examples were filtered for usable duration, finite waveform values, minimum sign
 ASR metrics were added to improve repeatability, but human listening remained the final selection criterion because automatic transcriptions contained obvious recognition errors.
 
 # Challenges and fixes
+Google Colab runtime limitations
+
+The assignment requested a Google Colab-compatible solution. Initial experiments were started on Colab, but the available free GPU sessions were unstable and frequently disconnected long training runs. The account also had no remaining guaranteed compute units, which made uninterrupted multi-stage training unreliable.
+
+To avoid losing checkpoints and generated outputs, the complete training and evaluation pipeline was finished on Kaggle. The project still uses standard Python, PyTorch, Hugging Face, Unsloth, and PEFT components, so the notebook is designed to remain compatible with a sufficiently provisioned Colab GPU runtime.
+
+Checkpoint recovery, output reuse, and session-restoration logic were added so interrupted runs could continue without restarting the full experiment.
 
 ## CSM padding-token compatibility
 
