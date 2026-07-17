@@ -1,6 +1,0 @@
-﻿model,sample_id,filename,text,status,duration_seconds,generation_seconds,peak_amplitude,number_of_samples
-female_1750,01,female_1750_01_namaste_order_sent.wav,"नमस्ते, आपका ऑर्डर सफलतापूर्वक भेज दिया गया है।",success,4.48,23.927745580673218,1.0,107520
-female_1750,02,female_1750_02_refund_status.wav,आपका रिफंड अगले पाँच कार्य दिवसों में आपके खाते में जमा कर दिया जाएगा।,success,4.64,24.66075110435486,0.77294921875,111360
-female_1750,03,female_1750_03_further_assistance.wav,क्या मैं आपकी किसी और सहायता कर सकता हूँ?,success,2.88,15.97204065322876,0.744140625,69120
-female_1750,04,female_1750_04_thank_you.wav,धन्यवाद! आपका दिन शुभ हो।,success,2.64,14.258533716201782,0.810546875,63360
-female_1750,05,female_1750_05_order_number.wav,कृपया अपना ऑर्डर नंबर बताइए।,success,3.36,18.186253547668457,0.79638671875,80640
