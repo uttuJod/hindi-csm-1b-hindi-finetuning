@@ -470,34 +470,6 @@ Models were explicitly deleted between checkpoint evaluations, followed by garba
 
 Later checkpoints generally had lower validation loss, but some earlier samples sounded smoother. This motivated the v1.3 sweep and multi-method evaluation.
 
-# Repository structure
-
-```text
-.
-├── README.md
-├── hindi-csm-1b-lora-finetuning-final.ipynb
-├── adapters/
-│   └── mixed_500/
-├── female_specialization/
-│   └── checkpoints/
-├── fixed_csm_processor/
-├── metrics/
-│   ├── female_validation_loss_500_to_3000.png
-│   ├── asr_intelligibility_ranking.png
-│   ├── best_system_word_errors.png
-│   ├── inference_sweep_asr_wer_cer.csv
-│   ├── inference_sweep_asr_ranking.csv
-│   ├── word_level_asr_alignments.csv
-│   ├── word_mispronunciation_summary.csv
-│   └── combined_manual_asr_evaluation.json
-└── outputs/
-    ├── reference/
-    ├── base/
-    ├── mixed_500/
-    ├── female_1500_to_3000/
-    └── inference_sweep_2500_2750_3000/
-```
-
 # Running the notebook
 
 1. Use a Kaggle or Colab GPU runtime with sufficient VRAM.
